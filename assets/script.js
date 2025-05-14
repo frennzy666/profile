@@ -56,8 +56,7 @@
     window.onload = () => {
       const card = document.querySelector('.card');
       if (sessionStorage.getItem('cardState') === 'hidden') {        
-        card.classList.remove("fade-out");
-        window.location.href = "#";
+        card.classList.remove("fade-out");        
       } 
       sessionStorage.removeItem('cardState');
     };
