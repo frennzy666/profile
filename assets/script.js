@@ -40,26 +40,6 @@
         card.querySelectorAll(".span").forEach(s => s.classList.remove("show"));
       });
     });
-    
-    document.querySelectorAll(".card a").forEach(link => {
-      link.addEventListener("click", e => {
-        e.preventDefault(); 
-        const card = link.closest(".card");
-        card.classList.add("fade-out");
-        setTimeout(() => {
-          sessionStorage.setItem('cardState', 'hidden');
-          window.location.href = link.href;
-        }, 1200);
-      });
-  });
-
-    window.onload = () => {
-      const card = document.querySelector('.card');
-      if (sessionStorage.getItem('cardState') === 'hidden') {        
-        card.classList.remove("fade-out");        
-      } 
-      sessionStorage.removeItem('cardState');
-    };
   
     const body = document.querySelector('body');
     const numberOfStars = 100; // biji plir
