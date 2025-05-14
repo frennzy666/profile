@@ -49,7 +49,7 @@
         setTimeout(() => {
           sessionStorage.setItem('cardState', 'hidden');
           window.location.href = link.href;
-        }, 1000);
+        }, 1200);
       });
   });
 
@@ -57,6 +57,7 @@
       const card = document.querySelector('.card');
       if (sessionStorage.getItem('cardState') === 'hidden') {
         card.style.opacity = 1;
+        card.classList.remove("fade-out");
       } 
       sessionStorage.removeItem('cardState');
     };
