@@ -229,9 +229,8 @@
       opacity: 1;
       transition-delay: 1.3s;
     }
-    .card.fade-out {
-      opacity: 1;
-      transition: opacity 1.2s ease;
+    span:hover {
+        border: 2px solid rgba(103,144,255,0.856);
     }
 
       
