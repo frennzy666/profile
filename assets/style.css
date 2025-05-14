@@ -230,7 +230,7 @@
       transition-delay: 1.3s;
     }
     .card.fade-out {
-      opacity: 0;
+      opacity: 1;
       transition: opacity 1.2s ease;
     }
 
