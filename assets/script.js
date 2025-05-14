@@ -47,13 +47,22 @@
         const card = link.closest(".card");
         card.classList.add("fade-out");
         setTimeout(() => {
+          sessionStorage.setItem('cardState', 'hidden');
           window.location.href = link.href;
         }, 1000);
       });
   });
+
+    window.onload = () => {
+      const card = document.querySelector('.card');
+      if (sessionStorage.getItem('cardState') === 'hidden') {
+        card.style.opacity = 1;
+      } 
+      sessionStorage.removeItem('cardState');
+    };
   
     const body = document.querySelector('body');
-    const numberOfStars = 100; // Jumlah bintang
+    const numberOfStars = 100; // biji plir
 
     for (let i = 0; i < numberOfStars; i++) {
       let star = document.createElement('div');
